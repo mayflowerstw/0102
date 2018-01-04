@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>index</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/desktop.css">
+	<link rel="stylesheet" href="css/mobile.css">
+	<link rel="stylesheet" href="css/ipad.css">
+
+	<script src="jquery-1.12.4.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("nav").find("a").click(function(){
+					let target = $(this).data("target");
+					let _offset = $("."+target).offset().top;
+					console.log(_offset);
+					$("html,body").animate({
+						scrollTop:_offset
+					});
+				})
+				$(".gotop,.home").click(function(){
+				$("html,body").animate({
+					scrollTop: 0
+				})
+				return false;
+			});
+			$(".gotop").hide();
+			$(window).scroll(function(){
+				let h = $(window).scrollTop();
+				console.log(h);
+				if(h>300){
+					$(".gotop").fadeIn();
+					$("nav").addClass("nav-black");
+				}else{
+					$(".gotop").fadeOut();
+					$("nav").removeClass("nav-black");
+				}
+
+				});
+
+			})
+		</script>	
+</head>
+<body>
+	<!-- nav.full-width>.fixed-width>.logo+ul>li*8>a -->
+<div class="wraper wraper1 ">
+	<nav class="full-width clearfix">
+		<div class="fixed-width">
+			<div class="logo">FEATURE<span class="orange">D</span></div>
+			<ul>
+				<li><a href="javascript:;" class="home" data-target="home">Home</a></li>
+				<li><a href="javascript:;" data-target="what">Service</a></li>
+				<li><a href="javascript:;" data-target="about">About Us</a></li>
+				<li><a href="javascript:;" data-target="team">Team</a></li>
+				<li><a href="javascript:;" data-target="store">Store</a></li>
+				<li><a href="javascript:;" data-target="happy">Testimonial</a></li>
+				<li><a href="javascript:;" data-target="news">News</a></li>
+				<li><a href="javascript:;" data-target="touch">Content</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="gotop"></div>
+	<header class="full-width">
+		<div class="title">
+			<h1>Beautiful WordPress Business Theme</h1>
+			<hr>
+			<h3>Cleanly Coded With User Friendly Interface</h3>
+			<a href="">Buy Now</a>
+		</div>
+
+	<div class="menu full-width clearfix">
+			<div class="col-3">
+				<div class="icon fa fa-money "></div>
+				<h4>Parallax Effect</h4>
+				<p>Lorem Ipsum is simply dummy text of the printing</p>
+			</div>
+			<div class="col-3">
+				<div class="icon fa fa-hand-spock-o"></div>
+				<h4>Unlimited Options</h4>
+				<p>Lorem Ipsum is simply dummy text of the printing </p>
+			</div>
+			<div class="col-3">
+				<div class="icon fa fa-cog fa-spin fa-3x fa-fw"></div>
+				<h4>Responsive Design</h4>
+				<p>Lorem Ipsum is simply dummy text of the printing </p>
+			</div>
+	</div>
+	<div class="orangeblock full-width">
+		<div class="fixed-width">
+			<div class="left">
+			Easy to step up, just take a few steps and your website is ready within a minute
+			</div>
+			<div class="right">
+			<a href="">Call To Action</a>
+			</div>
+		</div>
+	</div>
+<!-- .col-3*6>.icon_what+h5+p{Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate} -->
+
+	<div class="what clearfix">
+		<div class="fixed-width">
+			<h2>What We Do</h2>
+			<h4>This Is SubTitle</h4>
+			<div class="col-3">
+				<div class="icon_what fa fa-empire"></div>
+				<h5>Frequently Asked Question</h5>
+				<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+			</div>
+			<div class="col-3">
+				<div class="icon_what fa fa-odnoklassniki-square"></div>
+				<h5>Free Training & Courses</h5>
+				<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+			</div>
+			<div class="col-3">
+				<div class="icon_what fa fa-bicycle"></div>
+				<h5>Clean Code</h5>
+				<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+			</div>
+			<div class="col-3">
+				<div class="icon_what fa fa-cloud "></div>
+				<h5>Marketing Strategy</h5>
+				<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+			</div>
+			<div class="col-3">
+				<div class="icon_what fa fa-eye "></div>
+				<h5>Only Good In PayPal</h5>
+				<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+			</div>
+			<div class="col-3">
+				<div class="icon_what fa fa-globe "></div>
+				<h5>Production Graph</h5>
+				<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+			</div>
+		</div>
+	</div>
+	</header>
+	<div class="about clearfix">
+		<div class="fixed-width">
+			<div class="col-2">
+				<h2>ABout Us</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fugiat sint, atque dolorum dolorem mollitia aliquam, soluta saepe in reiciendis expedita quae! Quidem debitis, maxime quos veritatis eius vero id!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fugiat sint, atque dolorum dolorem mollitia aliquam, soluta saepe in reiciendis expedita quae! Quidem debitis, maxime quos veritatis eius vero id!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fugiat sint, atque dolorum dolorem mollitia aliquam, soluta saepe in reiciendis expedita quae! Quidem debitis, maxime quos veritatis eius vero id!</p>
+			</div>
+			<div class="col-2">
+				<img src="images/kristopher-roller-110203.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="welcome">
+		<div class="fixed-width_600">
+		<p>We offer unlimited column option in our sections.Our support forum open for free users also.</p>
+		<a href="">Welcome</a>
+		</div>
+	</div>
+	<div class="team clearfix">
+		<h1>Meet our Team</h1>
+		<h4>This Is Subtitle</h4>
+		<div class="fixed-width">
+			<div class="col-4">
+				<div class="name">Gabriel Labreez</div>
+				<div class="dese">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+				<div class="icon">
+					<span class="fa fa-facebook"></span>
+					<span class="fa fa-twitter"></span>
+					<span class="fa fa-instagram"></span>
+				</div>
+				<div class="job">Co-founder</div>
+			</div>
+			<div class="col-4">
+				<div class="name">Marie Stan</div>
+				<div class="dese">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+				<div class="icon">
+					<span class="fa fa-facebook"></span>
+					<span class="fa fa-twitter"></span>
+					<span class="fa fa-instagram"></span>
+				</div>
+				<div class="job">HR Manager</div>
+			</div>
+			<div class="col-4">
+				<div class="name">Maurics Blac</div>
+				<div class="dese">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+				<div class="icon">
+					<span class="fa fa-facebook"></span>
+					<span class="fa fa-twitter"></span>
+					<span class="fa fa-instagram"></span>
+
+				</div>
+				<div class="job">Developer</div>
+			</div>
+			<div class="col-4">
+				<div class="name">David Rasop</div>
+				<div class="dese">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+				<div class="icon">
+					<span class="fa fa-facebook"></span>
+					<span class="fa fa-twitter"></span>
+					<span class="fa fa-instagram"></span>
+				</div>
+				<div class="job">Support Manager</div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- .store>.fixed-width>h1{Woo Store}+h4{This Is Subtitle}+.col-3*3>a+.price+.title -->
+	<div class="store clearfix">
+		<div class="fixed-width">
+			<h1>Woo Store</h1>
+			<h4>This Is Subtitle</h4>
+			<div class="col-3">
+				<a href="">Add to cart</a>
+				<div class="price">&yen;100</div>
+				<div class="title">sweet</div>
+			</div>
+			<div class="col-3">
+				<a href="">Add to cart</a>
+				<div class="price">&yen;100</div>
+				<div class="title">cute</div>
+			</div>
+			<div class="col-3">
+				<a href="">Add to cart</a>
+				<div class="price">&yen;100</div>
+				<div class="title">lover</div>
+			</div>
+		</div>
+	</div>
+	<!-- .happy>.fixed-width>h1{Happy Customers}+h4{This Is Subtitle}>.col-3*3>.quote+img+p+.sign -->
+	<div class="happy clearfix">
+		<div class="fixed-width">
+			<h1>Happy Customers</h1>
+			<h4>This Is Subtitle</h4>
+				<div class="col-3">
+					<div class="quote "><span class="fa fa-quote-left"></span></div>
+					<img src="images/p1.jpg" alt="">
+					<p>I develop lots of websites with a vaiety of themes….the support I have had from ThemeHunk has been first class. Very quick, good support and always ready to correct my css errors!. They have tweaked the theme for me and have been great. Great support guys</p>
+					<div class="sign">Alex</div>
+				</div>
+				<div class="col-3">
+					<div class="quote"><span class="fa fa-quote-left"></span></div>
+					<img src="images/p2.jpg" alt="">
+					<p>I develop lots of websites with a vaiety of themes….the support I have had from ThemeHunk has been first class. Very quick, good support and always ready to correct my css errors!. They have tweaked the theme for me and have been great. Great support guys</p>
+					<div class="sign">Josh</div>
+				</div>
+				<div class="col-3">
+					<div class="quote"><span class="fa fa-quote-left"></span></div>
+					<img src="images/p3.jpg" alt="">
+					<p>I develop lots of websites with a vaiety of themes….the support I have had from ThemeHunk has been first class. Very quick, good support and always ready to correct my css errors!. They have tweaked the theme for me and have been great. Great support guys</p>
+					<div class="sign">Maria</div>
+				</div>
+		</div>
+	</div>
+	<!-- .new>h1{Latest News}+h4{This is Subtitle}+.col-4*4>.box>h3+p -->
+	<div class="news clearfix">
+		<h1>Latest News</h1>
+		<h4>This is Subtitle</h4>
+		<div class="col-4">
+			<div class="box">
+				<h3>coffe time</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, nemo!</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="box">
+				<h3>woman meeting</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, nemo!</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="box">
+				<h3>offical time</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, nemo!</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="box">
+				<h3>Interview time</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, nemo!</p>
+			</div>
+		</div>
+	</div>
+	<!-- .touch>.fixed-width>h1+h4+.col-2*2 -->
+	<div class="touch clearfix">
+		<div class="fixed-width">
+			<h1>Get In Touch</h1>
+			<h4>Any question?</h4>
+			<div class="col-2">
+				<from action="">
+					<h3>Contact Us</h3>
+					<div><input type="text" placeholder="Name"></div>
+					<div><input type="email" placeholder="Email"></div>
+					<div><input type="number" placeholder="Phone"></div>
+					<div><textarea placeholder="Message"></textarea></div>
+				<input type="submit" value="Submit">
+				</from>
+			</div>
+			<div class="col-2 clearfix">
+				<div class="col-3">
+					<div class="icon_touch fa fa-mobile"></div>
+					<p>+91 987654321</p>
+				</div>
+				<div class="col-3">
+					<div class="icon_touch fa fa-home"></div>
+					<p>92 Bayport Ave. South Richmond Hill, NY 11413</p>
+				</div>
+				<div class="col-3">
+					<div class="icon_touch fa fa-envelope-o"></div>
+					<p>info@themehunk.com</p>
+				</div>
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28914.32199052578!2d121.53413454999998!3d25.05814975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96c49f1e473%3A0xb4f74ae9ed21c1fb!2z5Y-w5YyX55W25Luj6Jed6KGT6aSo!5e0!3m2!1szh-TW!2stw!4v1514191556143"  frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer>.fixed-width>.top>(.col-4*4>h5+ul>li)+.bottom>.copyright+.icon_footer -->
+<footer>
+		<div class="fixed-width">
+			<div class="top clearfix">
+				<div class="col-4">
+					<h5>IMPORTANT LINKS</h5>
+					<ul>
+						<li>Affliates</li>
+						<li>Privacy Policy</li>
+						<li>Custom work</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h5>RECENT POSTS</h5>
+					<ul>
+						<li>Interview Meet</li>
+						<li>Business News</li>
+						<li>Coffee Timet</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h5>TAGS</h5>
+					<ul>
+						<li>Agency</li>
+						<li>Business</li>
+						<li>Meeting</li>
+						<li>Offici</li>
+						<li>Ontime</li>
+						<li>Relax</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h5>ABOUT</h5>
+					<ul>
+						<li>Cras egestas lectus nec tortor cursus tristique. Maecenas id lacus quis nibh sollicitudin laoreet quis eget leo.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="copyright">Business onepage theme Powered by ThemeHunk</div>
+				<div class="icon_footer">
+					<span class="fa fa-facebook"></span>
+					<span class="fa fa-twitter"></span>
+					<span class="fa fa-google-plus"></span>
+					<span class="fa fa-behance"></span>
+					<span class="fa fa-pinterest-p"></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<!--wraper-->
+</body>
+</html>
